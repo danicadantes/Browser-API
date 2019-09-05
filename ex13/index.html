@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 13</title>
+    <script>
+            const number1 = prompt('How long would do you like to stay here?')
+            let number = 3;
+            const showMessage = () => {
+           console.log(`You have been here for ${number} second`);
+           number +=1;
+           if (number == number1) {
+               clearInterval(id);
+               console.log('Your session has expired, come again soon!');
+           }
+         }
+             const id = setInterval(showMessage, 1000);
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

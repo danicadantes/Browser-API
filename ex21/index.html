@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exercise 21</title>
-    <script>
-        const paragraph = document.querySelector('p');
-        console.log(paragraph.innerText);
-    
-        body.onkeypress = function (event) {
-            event.key
-        paragraph.innerHTML = '<div>Hello</div>';
-        console.log(paragraph.innerText);
+  <title>Elements</title>
+  <script>
+        window.onload = function() {
+        let list = document.querySelector('li');
+        for (let i = 0; i <= 4; i++) {
+            list.setAttribute('class', 'orange');
+            if (i === 4) {
+                break;
+            }else {
+                list = list.nextElementSibling;
+            }
+        }console.log(list);
+       for (let i = 4; i >= 0; i--) {
+            if (i === 2) {
+                list.setAttribute('class', 'red')
+            }
+            if (i === 0) {
+                list.setAttribute('class', 'green')
+                break;
+            }
+            list = list.previousElementSibling;
+        }
+        console.log(list.parentElement);
+        console.log(list)
+        }
+  
+    </script>  
+  <style>
+    .red {
+      color: red;
     }
-    </script>
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
 </head>
 <body>
-    <p>Sample</p>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
 </body>
 </html>

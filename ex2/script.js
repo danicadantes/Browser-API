@@ -1,8 +1,5 @@
-const number = 0;
+for (let x = 1; x < 1001; x++) {
+    console.log(x);
+  }
 
-while(number>1001){
-    if(number %2 !=0)
-    console.log(number);
-    number++;
-}
 
